@@ -1,0 +1,22 @@
+<html>
+    <head>
+        <title> Sample 7 </title>
+    </head>
+    <body bgcolor = "LightGray">
+        <h1> Prompt </h1>
+        <p id = "Display1"></p>
+        <p id = "Display2"></p>
+        <script>
+            var x = prompt("Enter your Adhaar number");
+            console.log(x);
+            document.getElementById('Display1').innerHTML = "Please enter your Adhaar number in the prompt";
+        </script>
+        <script>
+             let y = confirm("Is the number correct?");
+             if(y==true)
+                document.getElementById('Display2').innerHTML = "Adhaar number entered is: " + x;
+             else
+             document.getElementById('Display2').innerHTML = "Number entered is wrong";
+        </script>
+    </body>
+</html>
