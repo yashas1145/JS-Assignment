@@ -1,0 +1,39 @@
+<html>
+    <head>
+        <title> Sample 8 </title>
+    </head>
+    <body bgcolor = "LightGray">
+        <h1> Array methods </h1>
+        <h3> Demo of 'shift()' </h3>
+        <p id = "Display1"> </p>
+        <h3> Demo of 'unshift()' </h3>
+        <p id = "Display2"> </p>
+        <h3> Demo of 'concat()' </h3>
+        <p id = "Display3"> </p> <br>
+        <hr color = "red"> <br>
+        <h1> String methods </h1>
+        <h3> Demo of 'slice()' </h3>
+        <p id = "Display4"> </p>
+        <h3> Demo of 'replace()' </h3>
+        <p id = "Display5"> </p>
+        <h3> Demo of 'concat()' </h3>
+        <p id = "Display6"> </p>
+        <script>
+            var x = ['A', 'B', 'C', 'D']; var y = ['a', 'b', 'c', 'd'];
+            var a = x.shift();
+            document.getElementById('Display1').innerHTML = "Element shifted out is: " + a;   
+            x.unshift('E');
+            document.getElementById('Display2').innerHTML = "Array is: " + x.toString();    
+            var z = x.concat(y);
+            document.getElementById('Display3').innerHTML = "Concatenated array is: " + z;
+        </script>
+        <script>
+            var x = "Hey there. I'm learning Javascript.";
+            var y = x.slice(24,34);
+            document.getElementById('Display4').innerHTML = "Substring obtained is: " + y;
+            var z = x.replace("Javascript","Python");
+            document.getElementById('Display5').innerHTML = "String obtained is: " + z;
+            document.getElementById('Display6').innerHTML = "String obtained is: " + x.concat(' ',z);
+        </script>
+    </body>
+</html>
