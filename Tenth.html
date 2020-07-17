@@ -1,0 +1,25 @@
+<html>
+    <head>
+        <title> Sample 10 </title>
+    </head>
+    <body bgcolor = "LightGray">
+        <p id = "Display"> </p>
+        <script>
+            var x = prompt("Enter a number");
+            function evenodd(y)
+            {
+                if(y%2 == 0)
+                {
+                    console.log("Number is even.");
+                    document.getElementById('Display').innerHTML = y + " is even.";
+                }
+                else
+                {
+                    console.log("Number is odd.");
+                    document.getElementById('Display').innerHTML = y + " is odd.";
+                }
+            }
+            evenodd(x)
+        </script>
+    </body>
+</html>
