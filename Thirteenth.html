@@ -1,0 +1,28 @@
+<html>
+    <head>
+        <title> Sample 13 </title>
+    </head>
+    <body bgcolor = "LightGray">
+        <p id = "FizzDisp"> </p>
+        <p id = "BuzzDisp"> </p>
+        Please check the console.
+    </body>
+    <script>
+        var x = 0, y = 0;
+        for(var i=0;i<=100;i++)
+        {
+            if(i%3==0)
+            {
+                ++x;
+                console.log(i + "Fizz");
+            }
+            else if(i%5==0)
+            {
+                ++y;
+                console.log(i + "Buzz");
+            }   
+        }
+        document.getElementById('FizzDisp').innerHTML = "Number of Fizz = " + x;
+        document.getElementById('BuzzDisp').innerHTML = "Number of Buzz = " + y;
+    </script>
+</html>
