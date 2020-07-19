@@ -1,0 +1,48 @@
+<html>
+    <head>
+        <title> Sample 17 </title>
+        <script>
+            function compute()
+            {
+                var x = parseFloat(document.getElementById('BS').value);
+                var y = parseFloat(document.getElementById('SA').value);
+                var z;
+                if(y>0 && y<=5000)
+                    z = x + (x*2/100);
+                else if(y>5001 && y<=10000)
+                    z = x + (x*5/100);
+                else if(y>10001 && y<=20000)
+                    z = x + (x*7/100);    
+                else if(y>20001)
+                    z = x + (x*10/100);
+                document.getElementById('NS').value = z;
+                document.getElementById('CE').value = z-x;
+            }
+        </script>
+    </head>
+    <body bgcolor = "LightGray">
+        <table border = "1">
+            <tr>
+                <td> Enter base salary: </td>
+                <td> <input type = "text>" id = 'BS'> </td>
+            </tr>
+            <tr>
+                <td> Enter sales amount: </td>
+                <td> <input type = "text>" id = 'SA'> </td>
+            </tr>
+        </table>
+        <br><br>
+        <button onclick = "compute()"> Compute Salary </button>
+        <br><br><br>
+        <table border = "1">
+            <tr>
+                <td> Net salary: </td>
+                <td> <input type = "text" readonly id = 'NS'> </td>
+            </tr>
+            <tr>
+                <td> Commission earned: </td>
+                <td> <input type = "text" readonly id = 'CE'> </td>
+            </tr>
+        </table>
+    </body>
+</html>
