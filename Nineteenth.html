@@ -1,0 +1,41 @@
+<html>
+    <head>
+        <title> Sample 19 </title> 
+        <script>
+            function genPrime()
+            {
+                var n = document.getElementById('N').value;
+                console.log(2);
+                console.log(3);
+                for(var i=2;i<n;i++)
+                {
+                    for(var j=2;j<n;j++)
+                    {
+                        if(i%j==0)
+                            break;
+                        else
+                        {
+                            if(i%3==0)
+                                break;
+                            else
+                                console.log(i);
+                        } 
+                    }
+                }
+            }
+        </script>
+    </head>
+    <body bgcolor = "LightGray">
+        <h2> Prime number generator </h2>
+        <table>
+            <tr>
+                <td> Enter limit (n): </td>
+                <td> <input type = "text" size = 10 id = 'N'> </td>
+            </tr>
+        </table>
+        <br>
+        <button onclick = "genPrime()"> Generate </button>
+        <br><br>
+        Check the console for result
+    </body>
+</html>
