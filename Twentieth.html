@@ -1,0 +1,17 @@
+<html>
+    <head>
+        <title> Sample 20 </title>
+    </head>
+    <body bgcolor = "LightGray">
+        <script>
+            function ask(question,yes,no)
+            {
+                if(confirm(question))
+                    yes();
+                else
+                    no();
+            }
+            ask("Do you agree?", () => alert("You agreed."), () => alert("You disagreed."));
+        </script>
+    </body>
+</html>
