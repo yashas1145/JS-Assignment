@@ -1,0 +1,60 @@
+<html>
+    <head>
+        <title> Sample 16 </title>
+        <script>
+            function compute(ch)
+            {
+                var c = ch; var r;
+                var x = parseFloat(document.getElementById('N1').value);
+                var y = parseFloat(document.getElementById('N2').value);
+                switch(c)
+                {
+                    case '1':   document.getElementById('Re').value = (x+y);
+                                break;
+                    case '2':   document.getElementById('Re').value = (x-y);
+                                break;
+                    case '3':   document.getElementById('Re').value = (x*y);
+                                break;
+                    case '4':   document.getElementById('Re').value = (x/y);
+                                break;
+                    case '5':   document.getElementById('Re').value = ((y*100)/x);
+                                break;
+                    case '6':   document.getElementById('Re').value = Math.sqrt(x);
+                                break;
+                    case '7':   document.getElementById('N1').value = null;
+                                document.getElementById('N2').value = null;
+                                document.getElementById('Re').value = null;
+                                break;
+                }
+            }
+        </script>
+    </head>
+    <body bgcolor = "LightGray">
+        <h2> Basic Calculator </h2>
+        <table border = "1">
+            <tr align = "center">
+                <td> Number 1 </td>
+                <td> <input type = "text" size = "15" id = "N1"> </td>
+            </tr>
+            <tr align = "center">
+                <td> Number 2 </td>
+                <td> <input type = "text" size = "15" id = "N2"> </td>
+            </tr>
+            <tr align = "center">
+                <td colspan = "9">
+                    <button onclick = "compute('1')"> + </button>
+                    <button onclick = "compute('2')"> - </button>
+                    <button onclick = "compute('3')"> * </button>
+                    <button onclick = "compute('4')"> / </button>
+                    <button onclick = "compute('5')"> % </button>
+                    <button onclick = "compute('6')"> Sqrt </button>
+                    <button onclick = "compute('7')"> Clr </button>
+                </td>
+            </tr>
+            <tr align = "center">
+                <td> Result </td>
+                <td> <input type = "text" size = "15" id = "Re" readonly> </td>
+            </tr>
+        </table>
+    </body>
+</html>
