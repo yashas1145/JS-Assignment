@@ -1,0 +1,20 @@
+<html>
+    <head>
+        <title> Sample 23 </title>
+    </head>
+    <script>
+        fetch('https://jsonplaceholder.typicode.com/todos').then
+        (
+            function(response) 
+            {
+                return response.json();
+            }
+        ).then
+        (
+            function(parsedJson)
+            {
+                console.log('This is the parsed json', parsedJson);
+            }
+        )
+    </script>
+</html>
