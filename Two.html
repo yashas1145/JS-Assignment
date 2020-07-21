@@ -1,0 +1,85 @@
+<html>
+    <head>
+        <title> Sample 22 </title>
+    </head>
+    <script>
+        class User 
+        {
+            constructor(name,age,email)
+            {
+                this.Name = name;
+                this.Age = age;
+                this.Email = email;
+            }
+            ConsoleDisplay()
+            {
+                console.log(this.Name);
+                console.log(this.Age);
+                console.log(this.Email);
+            }
+        }
+        class Moderator extends User
+        {
+            constructor(name,age,email,coins)
+            {
+                super(name,age,email);
+                this.Coins = coins;
+            }
+            ConsoleDisplay()
+            {
+                console.log(this.Name);
+                console.log(this.Age);
+                console.log(this.Email);
+                console.log(this.Coins);
+            }
+        }
+        class Admin extends Moderator
+        {
+            constructor(name,age,email,coins,course)
+            {
+                super(name,age,email,coins)
+                this.Course = course;
+            }
+            ConsoleDisplay()
+            {
+                console.log(this.Name);
+                console.log(this.Age);
+                console.log(this.Email);
+                console.log(this.Coins);
+                console.log(this.Course);
+            }
+        }
+        function AcceptUser()
+        {
+            var name = prompt("Enter name");
+            var age = prompt("Enter age");
+            var email = prompt("Enter mail ID");
+            User1 = new User(name,age,email);
+            User1.ConsoleDisplay();
+        }
+        function AcceptModerator()
+        {
+            var name = prompt("Enter name");
+            var age = prompt("Enter age");
+            var email = prompt("Enter mail ID");
+            var coins = prompt("Enter  number of coins to be added");
+            Moderator1 = new Moderator(name,age,email,coins);
+            Moderator1.ConsoleDisplay();
+        }
+        function AcceptAdmin()
+        {
+            var name = prompt("Enter name");
+            var age = prompt("Enter age");
+            var email = prompt("Enter mail ID");
+            var coins = prompt("Enter number of coins to be added");
+            var course = prompt("Enter Course name");
+            Admin1 = new Admin(name,age,email,coins,course);
+            Admin1.ConsoleDisplay();
+        }
+    </script>
+    <body bgcolor = "LightGray">
+        <button onclick = "AcceptUser()"> Add User </button> <br><br>
+        <button onclick = "AcceptModerator()"> Add Moderator </button> <br><br>
+        <button onclick = "AcceptAdmin()"> Add Admin </button>
+    </body>
+</html>
