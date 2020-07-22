@@ -1,0 +1,45 @@
+<html>
+    <head>
+        <title> Sample 26 </title>
+    </head>
+    <body bgcolor = "LightGray"> 
+        <div id = "Webpage" style = "height: 1080px;">  
+        <p id = "DayDisplay"> </p>
+        <p id = "TimeDisplay"> </p>
+        <script>
+            function DateDay()
+            {
+                var Days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+                var H = new Date();
+                var M = new Date(); 
+                var S = new Date();
+                var day = new Date();
+                document.getElementById('DayDisplay').innerHTML = "Today is: " + Days[day.getDay()];
+                document.getElementById('TimeDisplay').innerHTML = "Current time is: " + H.getHours() + "hr " + M.getMinutes() + "min " + S.getSeconds() + "s.";
+            }
+            setInterval(DateDay,500);
+            function toggledark()
+            {
+                if(document.getElementById('Toggle').value == "Light")
+                {
+                    document.getElementById('Toggle').value = "Dark";
+                    document.getElementById('Webpage').style.backgroundColor = "Gray";  
+                }
+                else if(document.getElementById('Toggle').value == "Dark")
+                {
+                    document.getElementById('Toggle').value = "Light";
+                    document.getElementById('Webpage').style.backgroundColor = "LightGray";  
+                }    
+            }
+            function welcome()
+            {
+                var x = prompt("Enter User name");
+                document.getElementById('Welcome').innerHTML = "Hey there " + x + "!";
+            }
+        </script>
+        <input type = "button" value = "Light" id = "Toggle" onclick = "toggledark()"> </input> <br><br>
+        <input type = "button" value = "Welcome a User" id = "Toggle" onclick = "welcome()"> </input> <br><br>
+        <p id = "Welcome"> </p>
+        </div>
+    </body>
+</html>
